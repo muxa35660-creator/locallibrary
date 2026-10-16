@@ -93,6 +93,9 @@ class Author(models.Model):
         """
         return '%s, %s' % (self.last_name, self.first_name)
 
+    class Meta:
+        ordering = ['last_name']
+
 class Language(models.Model):
     name = models.CharField(max_length=50, help_text='Enter a language name (e.g. English, French etc.')
 
